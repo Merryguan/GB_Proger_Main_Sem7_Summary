@@ -1,0 +1,5 @@
+#Excluded Directories
+bin
+obj
+
+#Excluded Files

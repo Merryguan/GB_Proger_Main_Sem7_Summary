@@ -25,8 +25,18 @@ int secondDigit = 0;
 
 Console.WriteLine("Введите натуральное число M: ");
 m = Convert.ToInt32(Console.ReadLine());
+if (m <= 0)
+{
+    Console.WriteLine("Неверный ввод.");
+    return;
+}
 Console.WriteLine("Введите натуральное число N: ");
 n = Convert.ToInt32(Console.ReadLine());
+if (n <= 0)
+{
+    Console.WriteLine("Неверный ввод.");
+    return;
+}
 
 if (n > m)
 {

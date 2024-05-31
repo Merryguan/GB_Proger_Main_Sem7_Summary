@@ -14,14 +14,23 @@ void PrintNaturalDigits(int startDigit, int endDigit)
         Console.Write(endDigit);
         return;
     }
-    Console.Write(startDigit + ", ");
-    PrintNaturalDigits(startDigit + 1, endDigit);
+    if (startDigit < endDigit)
+    {
+        Console.Write(startDigit + ", ");
+        PrintNaturalDigits(startDigit + 1, endDigit);
+    }
+    if (startDigit > endDigit)
+    {
+        Console.Write(startDigit + ", ");
+        PrintNaturalDigits(startDigit - 1, endDigit);
+    }
+    
 }
 
 int m = 0;
 int n = 0;
-int firstDigit = 0;
-int secondDigit = 0;
+//int firstDigit = 0;
+//int secondDigit = 0;
 
 Console.WriteLine("Введите натуральное число M: ");
 m = Convert.ToInt32(Console.ReadLine());
@@ -38,17 +47,17 @@ if (n <= 0)
     return;
 }
 
-if (n > m)
-{
-    firstDigit = m;
-    secondDigit = n;
-}
-else
-{
-    firstDigit = n;
-    secondDigit = m;
-}
+//if (n > m)
+//{
+//    firstDigit = m;
+//    secondDigit = n;
+//}
+//else
+//{
+//    firstDigit = n;
+//    secondDigit = m;
+//}
 
 Console.Write("\"");
-PrintNaturalDigits(firstDigit, secondDigit);
+PrintNaturalDigits(m, n);
 Console.Write("\"");

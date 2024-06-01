@@ -29,8 +29,6 @@ void PrintNaturalDigits(int startDigit, int endDigit)
 
 int m = 0;
 int n = 0;
-//int firstDigit = 0;
-//int secondDigit = 0;
 
 Console.WriteLine("Введите натуральное число M: ");
 m = Convert.ToInt32(Console.ReadLine());
@@ -46,17 +44,6 @@ if (n <= 0)
     Console.WriteLine("Неверный ввод.");
     return;
 }
-
-//if (n > m)
-//{
-//    firstDigit = m;
-//    secondDigit = n;
-//}
-//else
-//{
-//    firstDigit = n;
-//    secondDigit = m;
-//}
 
 Console.Write("\"");
 PrintNaturalDigits(m, n);
